@@ -1,4 +1,6 @@
-# PixMatch – Plateforme de mise en relation entre clients et professionnels de l'image
+# 🖼️ Projet Tuteuré – PixMatch
+
+**Plateforme de mise en relation entre clients et professionnels de l'image**
 
 ## 📌 Présentation du projet
 Description : Thème WordPress personnalisé pour PixMatch, plateforme de mise en relation entre clients et professionnels de l'image
