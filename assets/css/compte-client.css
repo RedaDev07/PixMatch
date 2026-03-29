@@ -1,0 +1,165 @@
+body{
+margin:0;
+font-family:Arial;
+background:#e6dddd;
+}
+
+/* TITLE */
+.title{
+text-align:center;
+margin-top:20px;
+}
+
+/* PROFILE HEADER */
+.profile-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 80px;
+}
+
+.profile-img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:8px solid #b2b6de;
+object-fit:cover;
+}
+
+.profile-name{
+flex:1;
+margin-left:30px;
+}
+
+.profile-name h2{
+margin:0;
+}
+
+.edit a{
+text-decoration:none;
+color:black;
+font-size:14px;
+}
+
+/* LAYOUT */
+.container{
+display:flex;
+padding:40px 80px;
+}
+
+/* LEFT SIDE */
+.left{
+width:250px;
+}
+
+/* MENU */
+.menu{
+background:#9fa6d0;
+padding:30px;
+border-radius:20px;
+}
+
+.menu button{
+display:flex;
+align-items:center;
+gap:10px;
+width:100%;
+padding:12px;
+margin:12px 0;
+border:none;
+border-radius:25px;
+background:white;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.menu button:hover{
+background:#f2f2f2;
+}
+
+.menu i{
+color:#555;
+}
+
+/* CALENDAR */
+.calendar{
+margin-top:40px;
+background:#9fa6d0;
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.date-title{
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.calendar input{
+width:100%;
+padding:10px;
+border:none;
+border-radius:8px;
+font-size:14px;
+}
+
+/* RIGHT SIDE */
+.right{
+flex:1;
+margin-left:40px;
+background:#f2f2f2;
+padding:30px;
+border-radius:20px;
+}
+
+.right h3{
+text-align:center;
+margin-bottom:20px;
+}
+
+/* DISCUSSION CARD */
+.discussion{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#f6e8a3;
+padding:15px;
+margin-top:15px;
+border-radius:25px;
+border:2px solid #b79cff;
+}
+
+/* USER */
+.user{
+display:flex;
+align-items:center;
+}
+
+.user img{
+width:40px;
+height:40px;
+border-radius:50%;
+margin-right:10px;
+}
+
+.user p{
+margin:0;
+font-size:13px;
+color:#555;
+}
+
+/* DATE */
+.date{
+font-size:14px;
+}
+
+/* TYPE */
+.type{
+text-align:right;
+}
+
+.type p{
+margin:0;
+font-size:13px;
+}

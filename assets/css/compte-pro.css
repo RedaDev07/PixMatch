@@ -1,0 +1,330 @@
+/* ===== COMPTE PRO - STYLE JAUNE ===== */
+
+.title {
+    text-align: center;
+    margin: 30px 0;
+    font-family: 'Fraunces', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #000;
+}
+
+/* PROFILE HEADER */
+.profile-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    background: #FFEB99;  /* JAUNE */
+    border: 2px solid #ABAED8;  /* BLEU VIOLET */
+    border-radius: 20px;
+    margin: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.avatar-upload-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid #fff;
+}
+
+.profile-infos {
+    flex: 1;
+}
+
+.pro-noms h2 {
+    margin: 0 0 5px;
+    font-size: 28px;
+    font-family: 'Fraunces', serif;
+}
+
+.pro-entreprise, .pro-siret {
+    margin: 5px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.pro-competences h3 {
+    margin: 15px 0 10px;
+    font-size: 20px;
+    font-family: 'Fraunces', serif;
+    color: #000;
+}
+
+.competences-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.competence-tag {
+    background: #ABAED8;  /* VIOLET */
+    color: #000;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #000;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* LEFT COLUMN */
+.left {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.menu {
+    background: #FFEB99;  /* JAUNE */
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid #ABAED8;
+    margin-bottom: 30px;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.menu-btn i {
+    color: #555;
+    font-size: 18px;
+}
+
+.menu-btn.active {
+    background: #ABAED8;  /* VIOLET */
+    color: #000;
+    border-color: #000;
+    font-weight: 700;
+}
+
+.menu-btn.active i {
+    color: #000;
+}
+
+.menu-btn:hover {
+    background: #f2f2f2;
+    transform: translateX(5px);
+}
+
+.calendar {
+    background: #FFEB99;  /* JAUNE */
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #ABAED8;
+    text-align: center;
+}
+
+.date-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.calendar input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ABAED8;
+    border-radius: 10px;
+    font-size: 14px;
+    background: white;
+}
+
+/* RIGHT COLUMN */
+.right {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+}
+
+.right h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Fraunces', serif;
+}
+
+/* DISCUSSIONS */
+.discussion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.discussion:hover {
+    border-color: #ABAED8;
+    transform: translateY(-2px);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user strong {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.user p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.date {
+    font-size: 14px;
+    color: #888;
+}
+
+.btn-supprimer, .btn-restaurer {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-supprimer:hover {
+    background: #ff4444;
+    color: white;
+}
+
+.btn-restaurer:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+/* FORMULAIRE DE MODIFICATION */
+#edit-profile-form {
+    background: #fff9e6 !important;
+    border: 2px solid #FFEB99;
+    margin: 20px 30px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#edit-profile-form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#edit-profile-form input {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+#edit-profile-form input:focus {
+    border-color: #FFEB99;
+    outline: none;
+}
+
+#add-competence {
+    background: #FFEB99 !important;
+    border: 2px solid #ABAED8 !important;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+#add-competence:hover {
+    background: #ffe066 !important;
+    transform: translateY(-2px);
+}
+.pro-email {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.pro-roles {
+    margin-top: 15px;
+}
+
+.pro-roles h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    font-family: 'Fraunces', serif;
+}
+
+.roles-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.role-tag {
+    background: #FFEB99;
+    color: #000;
+    padding: 6px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #ABAED8;
+}

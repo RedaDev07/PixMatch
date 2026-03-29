@@ -1,0 +1,838 @@
+/* ===============================
+   RESET & FONTS
+=============================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+
+
+/* ===============================
+   FOOTER
+=============================== */
+.pixmatch-footer {
+  background: #b8bbdf;
+  padding: 26px 18px;
+  border-top: 2px solid #000;
+}
+
+.pixmatch-footer__inner {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* Colonne gauche */
+.pixmatch-footer__left {
+  width: 220px; /* ajuste si besoin */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pixmatch-footer__brand .custom-logo {
+  width: 80px !important;  /* ← change cette valeur pour ajuster */
+  height: auto !important;
+  display: block !important;
+  margin-bottom: 15px !important;
+}
+
+/* Icônes réseaux sociaux */
+.pixmatch-footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.pixmatch-social {
+  width: 34px;
+  height: 34px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  transition: background .2s ease, color .2s ease;
+}
+
+.pixmatch-social svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Hover propre */
+.pixmatch-social:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Newsletter */
+.pixmatch-footer__newsletter-title {
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+/* Colonnes liens */
+.pixmatch-footer__cols {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  gap: 22px;
+}
+
+.pixmatch-footer__col h4 {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.pixmatch-footer__col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pixmatch-footer__col li {
+  margin: 6px 0;
+}
+
+.pixmatch-footer__col a {
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pixmatch-footer__col a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Responsive Footer
+=============================== */
+@media (max-width: 992px) {
+  .pixmatch-footer__inner {
+    flex-direction: column;
+  }
+
+  .pixmatch-footer__left {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .pixmatch-footer__cols {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .pixmatch-footer__cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================
+   PAGE CHOIX INSCRIPTION
+========================== */
+.pm-choice {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 50px 20px;
+  background: #efe6e6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Décoration background comme la maquette */
+.pm-choice::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 320px;
+  height: 320px;
+  background: #d9a7ff;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.pm-choice::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: #ffe8a3;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.pm-choice__title {
+  font-size: 55px;
+  font-weight: 900;
+  margin: 0;
+  z-index: 2;
+}
+
+.pm-choice__subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0 50px;
+  z-index: 2;
+}
+
+/* Cards */
+.pm-choice__cards {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+.pm-card {
+  width: 250px;
+  height: 300px;
+  border-radius: 12px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  border: 4px solid #c78cff;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pm-card--client {
+  background: #b8bbdf;
+}
+
+.pm-card--pro {
+  background: #ffe8a3;
+  border-color: #ffd45b;
+}
+
+.pm-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #000;
+}
+
+.pm-card__icon img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.pm-card__btn {
+  background: #000;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* Login section */
+.pm-choice__login {
+  z-index: 2;
+}
+
+.pm-choice__logintext {
+  font-weight: 900;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.pm-choice__loginbtn {
+  display: inline-block;
+  background: #000;
+  border: 2px solid #c78cff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.pm-choice__loginbtn:hover {
+  background: #333;
+  border-color: #a85dff;
+}
+
+/* ==========================
+   Responsive Page Choix
+========================== */
+@media (max-width: 768px) {
+  .pm-choice__cards {
+    gap: 40px;
+  }
+  
+  .pm-card {
+    width: 220px;
+    height: 280px;
+  }
+  
+  .pm-choice__title {
+    font-size: 42px;
+  }
+  
+  .pm-choice__subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pm-choice__cards {
+    flex-direction: column;
+  }
+}
+
+/* ==========================
+   PAGES AUTHENTIFICATION
+========================== */
+html, body {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* page full screen (sans header/footer) */
+.pm-auth-page {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Layout global */
+.pm-auth {
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 60px !important;
+  padding: 50px 70px !important;
+  box-sizing: border-box !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ajout de cercles décoratifs comme dans la maquette */
+.pm-auth::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.pm-auth::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.pm-auth__left,
+.pm-auth__right {
+  width: 50% !important;
+  position: relative;
+  z-index: 1;
+}
+
+.pm-auth__right {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* ======================
+   COLONNE GAUCHE
+====================== */
+.pm-auth__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.pm-auth__logo-wide img {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pm-auth__slogan {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: #000;
+}
+
+/* ======================
+   COLONNE DROITE
+====================== */
+/* Card formulaire */
+.pm-auth__card {
+  width: 430px;
+  max-width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 26px 22px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.14);
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  margin: 0 !important;
+  backdrop-filter: blur(5px);
+}
+
+/* petit logo en haut */
+.pm-auth__form-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.pm-auth__form-logo img {
+  width: 95px;
+  height: auto;
+  display: block;
+}
+
+/* logo long en bas */
+.pm-auth__footer-logo-wide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.pm-auth__footer-logo-wide img {
+  width: 170px;
+  height: auto;
+  display: block;
+}
+
+.pm-auth__footer-text {
+  margin-top: 8px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.85;
+  max-width: 250px;
+}
+
+/* ======================
+   PAGE CLIENT
+====================== */
+.pm-auth--client {
+  background: #b8bbdf; /* violet/bleu maquette */
+}
+
+.pm-auth--client::before {
+  background: #d9a7ff;
+}
+
+.pm-auth--client::after {
+  background: #b8bbdf;
+}
+
+/* ======================
+   PAGE PROFESSIONNEL
+====================== */
+.pm-auth--pro {
+  background: #ffe8a3; /* jaune maquette */
+}
+
+.pm-auth--pro::before {
+  background: #ffd45b;
+  opacity: 0.6;
+}
+
+.pm-auth--pro::after {
+  background: #ffb800;
+  opacity: 0.4;
+}
+
+/* Texte spécifique pour la page Pro */
+.pm-auth--pro .pm-auth__footer-text {
+  color: #333;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+/* ======================
+   ULTIMATE MEMBER (FORM)
+====================== */
+/* enlève marges UM */
+.pm-auth__card .um {
+  margin: 0 !important;
+  width: 100% !important;
+  float: none !important;
+  display: block !important;
+}
+
+/* cache labels pour utiliser placeholders (comme maquette) */
+.pm-auth__card .um-field-label {
+  display: none !important;
+}
+
+/* enlève padding interne UM parfois énorme */
+.pm-auth__card .um-form {
+  padding: 0 !important;
+}
+
+/* espace entre champs */
+.pm-auth__card .um .um-field {
+  margin-bottom: 10px !important;
+}
+
+/* inputs style pill */
+.pm-auth__card .um-field input[type="text"],
+.pm-auth__card .um-field input[type="password"],
+.pm-auth__card .um-field input[type="email"],
+.pm-auth__card .um-field input[type="number"],
+.pm-auth__card .um-field input[type="url"],
+.pm-auth__card .um-field input[type="tel"],
+.pm-auth__card .um-field textarea,
+.pm-auth__card .um-field select {
+  width: 100% !important;
+  border: 2px solid #c78cff !important;
+  border-radius: 999px !important;
+  padding: 10px 14px !important;
+  font-size: 13px !important;
+  background: #fff !important;
+  outline: none !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.3s ease;
+}
+
+/* Style spécifique pour les inputs Pro */
+.pm-auth--pro .pm-auth__card .um-field input[type="text"],
+.pm-auth--pro .pm-auth__card .um-field input[type="password"],
+.pm-auth--pro .pm-auth__card .um-field input[type="email"],
+.pm-auth--pro .pm-auth__card .um-field input[type="number"],
+.pm-auth--pro .pm-auth__card .um-field input[type="url"],
+.pm-auth--pro .pm-auth__card .um-field input[type="tel"],
+.pm-auth--pro .pm-auth__card .um-field textarea,
+.pm-auth--pro .pm-auth__card .um-field select {
+  border-color: #ffd45b !important; /* bordure jaune pour Pro */
+}
+
+/* textarea un peu moins arrondi si besoin */
+.pm-auth__card .um-field textarea {
+  border-radius: 18px !important;
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Pour la page Pro, textarea plus grand pour description */
+.pm-auth--pro .pm-auth__card .um-field-type_textarea textarea {
+  min-height: 120px !important;
+  border-radius: 18px !important;
+}
+
+/* focus */
+.pm-auth__card .um-field input:focus,
+.pm-auth__card .um-field textarea:focus,
+.pm-auth__card .um-field select:focus {
+  border-color: #a85dff !important;
+}
+
+/* focus spécifique pour Pro */
+.pm-auth--pro .pm-auth__card .um-field input:focus,
+.pm-auth--pro .pm-auth__card .um-field textarea:focus,
+.pm-auth--pro .pm-auth__card .um-field select:focus {
+  border-color: #ffb800 !important;
+}
+
+/* checkbox "Afficher mot de passe" */
+.pm-auth__card .um-field .um-field-checkbox {
+  text-align: left;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.pm-auth__card .um-field .um-field-checkbox input {
+  margin-right: 5px;
+}
+
+/* bouton submit noir */
+.pm-auth__card .um input[type="submit"].um-button {
+  width: auto !important;
+  background: #000 !important;
+  border: none !important;
+  color: #fff !important;
+  padding: 10px 22px !important;
+  border-radius: 999px !important;
+  font-weight: 900 !important;
+  font-size: 13px !important;
+  cursor: pointer !important;
+  margin-top: 8px !important;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pm-auth__card .um input[type="submit"].um-button:hover {
+  background: #333 !important;
+  transform: translateY(-2px);
+}
+
+/* Style spécifique bouton Pro */
+.pm-auth--pro .pm-auth__card .um input[type="submit"].um-button {
+  background: #000 !important;
+}
+
+/* cache boutons secondaires UM (login/back etc) */
+.pm-auth__card .um .um-button.um-alt {
+  display: none !important;
+}
+
+/* message erreur UM */
+.pm-auth__card .um .um-field-error,
+.pm-auth__card .um .um-notice {
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 8px 12px !important;
+}
+
+/* Lien "Déjà un compte ?" */
+.pm-auth__card .um .um-col-alt {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.pm-auth__card .um .um-col-alt a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pm-auth__card .um .um-col-alt a:hover {
+  text-decoration: underline;
+}
+
+/* ======================
+   RESPONSIVE AUTH
+====================== */
+@media (max-width: 1200px) {
+  .pm-auth {
+    padding: 40px !important;
+    gap: 40px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .pm-auth {
+    flex-direction: column !important;
+    gap: 22px !important;
+    padding: 28px 16px !important;
+    text-align: center;
+    min-height: auto !important;
+  }
+  
+  .pm-auth__left,
+  .pm-auth__right {
+    width: 100% !important;
+  }
+  
+  .pm-auth__left {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .pm-auth__logo-wide img {
+    max-width: 320px;
+  }
+  
+  .pm-auth__slogan {
+    font-size: 22px;
+  }
+  
+  .pm-auth__card {
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  /* Cache les cercles décoratifs en mobile */
+  .pm-auth::before,
+  .pm-auth::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .pm-auth__card {
+    padding: 20px 15px;
+  }
+  
+  .pm-auth__logo-wide img {
+    max-width: 280px;
+  }
+  
+  .pm-auth__slogan {
+    font-size: 18px;
+  }
+}
+
+/* ======================
+   STYLES SPÉCIFIQUES POUR CHAMPS PRO
+====================== */
+/* Pour les champs de spécialité, équipement, etc. */
+.pm-auth--pro .um-field-type_multiselect,
+.pm-auth--pro .um-field-type_select {
+  margin-bottom: 15px !important;
+}
+
+/* Style pour les options select */
+.pm-auth__card .um-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 35px !important;
+}
+
+/* Pour les champs de fichier (portfolio) */
+.pm-auth--pro .um-field-type_file {
+  text-align: left;
+}
+
+.pm-auth--pro .um-field-type_file input[type="file"] {
+  border: 2px dashed #ffd45b !important;
+  border-radius: 12px !important;
+  padding: 15px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Style pour les champs de tarif */
+.pm-auth--pro .um-field-type_number input {
+  text-align: center;
+  font-weight: 700;
+}
+/* =========================================
+   PIXMATCH - PAGE CONNEXION (LOGIN)
+   ========================================= */
+
+.pm-auth--login {
+  background: #F0E7E7; /* Même fond que client */
+}
+
+/* ===================================
+   COULEURS HEADER/FOOTER SELON LA PAGE
+   =================================== */
+
+/* Version Particuliers (violet) */
+.page-particuliers .pixmatch-header {
+    background: #ABAED8 !important;
+}
+
+.page-particuliers .pixmatch-footer {
+    background: #b8bbdf !important;
+}
+
+.page-particuliers .pixmatch-switch {
+    background: #ABAED8 !important;
+}
+
+/* Version Créateurs (jaune) */
+.page-cdc .pixmatch-header {
+    background: #FFEB99 !important;
+}
+
+.page-cdc .pixmatch-footer {
+    background: #FFEB99 !important;
+}
+
+.page-cdc .pixmatch-switch {
+    background: #FFEB99 !important;
+}
+
+/* Le switch actif reste blanc */
+.pixmatch-switch__btn.is-active {
+    background: #fff !important;
+    box-shadow: inset 0 0 0 2px #000;
+}
+/* ===== LOADER POUR LE SWITCH ===== */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.page-loader::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ABAED8;
+    border-radius: 50%;
+    margin-left: 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
